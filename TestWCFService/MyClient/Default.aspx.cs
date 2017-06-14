@@ -15,7 +15,7 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        MyServiceClient srvcClient = new MyServiceClient();
+        MyServiceClient srvcClient = new MyServiceClient("BasicHttpBinding_IMyService");
         Label1.Text = srvcClient.GetData(Int32.Parse(TextBox1.Text));
     }
 }
